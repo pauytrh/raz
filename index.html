@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <title>רז ליבוביץ - פסיכולוג</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            direction: rtl;
+            background: url('https://transparenttextures.com/patterns/always-grey.png') repeat; /* Example pattern */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            scroll-behavior: smooth;
+            perspective: 1200px;
+        }
+
+        .container {
+            position: relative; /* To contain the overlay */
+            z-index: 1; /* Ensure content is above the overlay */
+            background: rgba(255, 255, 255, 0.8); /* Light background for content readability */
+            padding: 20px;
+            border-radius: 12px; /* Optional: for aesthetics */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Optional: for depth */
+        }
+        * {
+            backface-visibility: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #4a9fb2, #5ca2b8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1, h2 {
+            color: #3a5a7a;
+        }
+        p, .service-item, h1, h2 {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            line-height: 1.6;
+            margin: 0.5em 0;
+        }
+        .contact {
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        a {
+            color: #5ca2b8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #4a9fb2;
+        }
+        .services-list {
+            margin: 20px 0;
+        }
+        .service-item {
+            max-width: fit-content;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(92, 162, 184, 0.2);
+            color: #3a5a7a;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .service-item:hover {
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style> 
+</head>
+<body>
+
+<header>
+    <h1>רז ליבוביץ</h1>
+    <h2>פסיכולוג קליני</h2>
+</header>
+
+<div class="container">
+    <p>אני רז ליבוביץ, פסיכולוג קליני עם ניסיון רב בטיפול ובייעוץ.</p>
+    <p>אני מציע טיפולים מותאמים אישית, והגישה שלי מתמקדת בהבנת הצרכים הייחודיים של כל אדם.</p>
+
+    <h2>שירותים</h2>
+    <div class="services-list">
+        <div class="service-item">טיפול בחרדה</div>
+        <div class="service-item">טיפול בדיכאון</div>
+        <div class="service-item">טיפול זוגי</div>
+        <div class="service-item">ייעוץ להורים</div>
+    </div>
+
+    <h2>קצת עליי</h2>
+    <p>אני בוגר תואר שני בפסיכולוגיה קלינית, עם הכשרה מעשית במסגרות שונות, כולל מרפאות ציבוריות ומרפאות פרטיות. אני מאמין בתהליך טיפולי המבוסס על שיחה פתוחה וכנה.</p>
+
+    <h2>הגישה שלי</h2>
+    <p>אני משתמש בגישות טיפול שונות, כולל טיפול קוגניטיבי-התנהגותי (CBT) וטיפול ממוקד-רגש. המטרה שלי היא לעזור ללקוחות שלי להבין את עצמם טוב יותר ולפתח כלים להתמודד עם אתגרים שונים.</p>
+
+    <h2>המלצות</h2>
+    <p>"הטיפול עם רז שינה את חיי. הוא הקשיב לי ולצרכים שלי, והעניק לי כלים אמיתיים להתמודדות." - לקוח מרוצה</p>
+    <p>"אני ממליץ על רז לכל מי שמחפש תמיכה מקצועית ואנושית." - לקוח מרוצה</p>
+
+    <h2>קישורים שימושיים</h2>
+    <ul>
+        <li><a href="https://www.mentalhealth.gov/" target="_blank">משרד הבריאות - מידע על בריאות נפש</a></li>
+        <li><a href="https://www.psychologytoday.com/" target="_blank">פסיכולוגיה היום - מאמרים וטיפים</a></li>
+        <li><a href="https://www.nami.org/" target="_blank">NAMI - אגודת הבריאות הנפשית הלאומית</a></li>
+    </ul>
+
+    <h2>צור קשר</h2>
+    <div class="contact">
+        <p>לשאלות או לקביעת פגישה, אנא פנו אלי:</p>
+        <p>טלפון: <a href="tel:052-4269067">052-4269067</a></p>
+        <p>דוא"ל: <a href="mailto:raz.leibo@gmail.com">raz.leibo@gmail.com</a></p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 רז ליבוביץ - כל הזכויות שמורות</p>
+</footer>
+
+<script>
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Set a staggered delay for each service item
+                entry.target.style.transitionDelay = `${index * 0.2}s`;
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    document.querySelectorAll('h1, h2, p, .service-item').forEach(element => {
+        observer.observe(element);
+    });
+</script>
+
+</body>
+</html>
