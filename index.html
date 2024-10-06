@@ -9,7 +9,7 @@
         body {
             font-family: 'Arial', sans-serif;
             direction: rtl;
-            background: url('https://transparenttextures.com/patterns/always-grey.png') repeat; /* Example pattern */
+            background: url('https://transparenttextures.com/patterns/always-grey.png') repeat;
             color: #333;
             margin: 0;
             padding: 20px;
@@ -18,12 +18,12 @@
         }
 
         .container {
-            position: relative; /* To contain the overlay */
-            z-index: 1; /* Ensure content is above the overlay */
-            background: rgba(255, 255, 255, 0.8); /* Light background for content readability */
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
-            border-radius: 12px; /* Optional: for aesthetics */
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Optional: for depth */
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
         * {
             backface-visibility: hidden;
@@ -77,10 +77,28 @@
         a {
             color: #5ca2b8;
             text-decoration: none;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
         a:hover {
-            text-decoration: underline;
             color: #4a9fb2;
+            transform: translateY(-3px);
+        }
+        a div {
+            width: 100%;
+            height: 2px;
+            background-color: #4a9fb2;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+        a:hover div {
+            transform: scaleX(1);
+            transform-origin: left;
         }
         .services-list {
             margin: 20px 0;
@@ -132,16 +150,16 @@
 
     <h2>קישורים שימושיים</h2>
     <ul>
-        <li><a href="https://www.mentalhealth.gov/" target="_blank">משרד הבריאות - מידע על בריאות נפש</a></li>
-        <li><a href="https://www.psychologytoday.com/" target="_blank">פסיכולוגיה היום - מאמרים וטיפים</a></li>
-        <li><a href="https://www.nami.org/" target="_blank">NAMI - אגודת הבריאות הנפשית הלאומית</a></li>
+        <li><a href="https://www.mentalhealth.gov/" target="_blank">משרד הבריאות - מידע על בריאות נפש<div></div></a></li>
+        <li><a href="https://www.psychologytoday.com/" target="_blank">פסיכולוגיה היום - מאמרים וטיפים<div></div></a></li>
+        <li><a href="https://www.nami.org/" target="_blank">NAMI - אגודת הבריאות הנפשית הלאומית<div></div></a></li>
     </ul>
 
     <h2>צור קשר</h2>
     <div class="contact">
         <p>לשאלות או לקביעת פגישה, אנא פנו אלי:</p>
-        <p>טלפון: <a href="tel:052-4269067">052-4269067</a></p>
-        <p>דוא"ל: <a href="mailto:raz.leibo@gmail.com">raz.leibo@gmail.com</a></p>
+        <p>טלפון: <a href="tel:052-4269067">052-4269067<div></div></a></p>
+        <p>דוא"ל: <a href="mailto:raz.leibo@gmail.com">raz.leibo@gmail.com<div></div></a></p>
     </div>
 </div>
 
@@ -159,7 +177,6 @@
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                // Set a staggered delay for each service item
                 entry.target.style.transitionDelay = `${index * 0.2}s`;
                 entry.target.classList.add('show');
                 observer.unobserve(entry.target);
